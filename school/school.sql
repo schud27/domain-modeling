@@ -30,9 +30,14 @@ CREATE TABLE courses (
 );
 
 CREATE TABLE sections (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    time TEXT,
-    course_id INTEGER,
-    teacher_id INTEGER
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  time TEXT,
+  course_id INTEGER,
+  teacher_id INTEGER
 );
 
+CREATE TABLE enrollments (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  section_id INTEGER,
+  student_id INTEGER
+);
